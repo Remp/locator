@@ -1,0 +1,59 @@
+@import './style.less';
+.caption{
+    font-size: 2rem;
+    color: rgb(255, 203, 203);
+    text-align: center;
+    padding-bottom: 2rem;
+    font-family: 'Exo 2';
+    font-style: italic;
+}
+.index-page{
+    h2{
+        color: rgb(255, 32, 32);
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .description{
+        font-size: 1.4rem;
+        color: white;
+    }
+    .spots-list{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        .card{
+            width: 100%;
+            background-color: @main-color;
+            color: white;
+            .top{
+                padding: 0.5rem 0.5rem 0 0.5rem;
+                display: flex;
+                justify-content: space-between;
+                .name{
+                    display: flex;
+                    h5{
+                        font-family: 'PT Sans';
+                        color: #ff1414
+                    }
+                    .stars{
+                        flex:1;
+                        padding-top: 0.2rem;
+                        padding-left: 0.5rem; 
+                        .gold{
+                            color: #e9ca40
+                        }
+                    }
+                }
+                
+            }
+            .address{
+                padding: 1.5rem;
+                background-color: rgba(0, 47, 255, 0.082)
+            }
+            .adv{
+                padding: 1rem 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width', initial-scale=1.0)
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet/less', href='/stylesheets/style.less')
+    link(rel='stylesheet/less', href='/stylesheets/index.less')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=PT+Sans')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Exo+2')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.6/css/all.css')
+  body
+    .navbar.navbar-expand-lg.navbar-dark.navbar-fixed-top.bg-navbar
+      a.navbar-brand(href='#') Locator
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar')
+        span.navbar-toggler-icon
+      .collapse.navbar-collapse#navbar
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='/about') About
+
+    .container.main
+      block content
+    footer.container-fluid
+      .row
+        .col-xs-12.footer-c
+          small &copy; Locator 2018
+    script(src='/javascripts/jquery-3.3.1.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='/javascripts/less.min.js')
+  

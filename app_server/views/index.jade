@@ -1,0 +1,30 @@
+extends layout
+include _include/shared
+
+block content
+  .row
+    .col-12.caption Найди место для работы прямо сейчас
+  .row.index-page
+    .col-md-6.col-sm-12 
+      ul.spots-list
+        each spot in spots
+          li.card
+            .top
+              .name
+                h5= spot.name
+                .stars
+                  +getRating(spot.rating)
+              div= spot.range        
+            .address= spot.address
+            .adv
+              -for(let j = 0; j < spot.facilities.length; j++)
+                .badge.badge-warning #{spot.facilities[j]}
+    .col-md-6.col-sm-12.description 
+        Наверняка вы сидите сейчас дома в предвкушении большой работы, которую нужно выполнить как можно скорее.
+        Домашние стены давят на вас, и единственное о чем вы можете думать это отложить дело на завтра,
+        ведь завтра все будет иначе и вы будете полны сил. <br/>
+        Не питайте иллюзий, завтра будет все будет только хуже. Как средство от прокрастинации - мы предлагаем
+        вам взять свой компьютер и найти замечательно место с wi-fi, где вы будете себя чувствовать частью
+        чего-то большего, и революционные мысли придут сами по себе. Нужно лишь выйти с клетки и дать разуму
+        воспарить над всеми преградами.
+

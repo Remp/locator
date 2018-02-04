@@ -1,0 +1,6 @@
+mixin getRating(rating)
+    -for (let i = 0; i < 5; i++)
+        -if (i < rating)
+            i.fas.fa-star.gold
+        -else
+            i.fas.fa-star
